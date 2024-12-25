@@ -1,13 +1,16 @@
 import React from 'react'
-import './style.css'
+import { Content, Footer, Header } from './func-components';
+import Calendar from './class-componets';
 
 function App() {
   return (
-  <>
-  <h2>DeveLoperThai.com</h2>
-  <div className='title'>React & React Native</div>
-  </>
+    <>
+    <Header/>
+    <p><center><Calendar/></center></p>
+    <Content/>
+    <Footer/>
+    </>
+    
   );
 }
-
 export default App;
