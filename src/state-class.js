@@ -1,0 +1,33 @@
+import React, { Component,useState } from "react";
+
+export default function MessageBox() {
+    let [text, setText] = useState('Tanapon')
+    let [size, setSize] =  React.useState(16)
+
+    const OnClickSetText = () => {
+        let t = prompt('กำหนดข้อความ')
+        if(t) {
+            setText(t)
+        }
+    }
+    const onClickZoomIn = () => {
+        let newSize = size + 1 
+        setSize(newSize)
+    }
+    let msgboxStyle = {
+        display:'inline-block',
+        width: 350,
+        fontSize: size,
+        backgroundColor :'#ccc',
+        padding: 5,
+        textAlign: 'left'
+    }
+    return(
+        <div style={{textAlign: 'center', marginTop: 20 }}>
+            <div style={msgboxStyle}> {text} </div><br></br>
+            <button onClick={OnClickSetText}> ข้อความ </button>&nbsp;
+            <button onClick={onClickZoomIn}> เพ่ิ่มขนาด </button>&nbsp;
+            <button onClick={() => setSize(size - 1)}> ลดขนาด</button>
+        </div>
+    )
+}
