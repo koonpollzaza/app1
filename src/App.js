@@ -5,7 +5,9 @@ import React from 'react'
 //import { Calculator2 } from './calculator';
 //import { EventData2 } from './event-data';
 import RefsFunc from './refs-class'
+import RefsArray from './refs-array'
 
 export default function App(){
-  return <RefsFunc/>
+  //return <RefsFunc/>
+  return <RefsArray/>
 } 
